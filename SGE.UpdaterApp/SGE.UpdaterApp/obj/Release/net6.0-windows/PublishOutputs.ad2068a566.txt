@@ -1,0 +1,11 @@
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\SGE.UpdaterApp.exe
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\SGE.UpdaterApp.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\SGE.UpdaterApp.deps.json
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\SGE.UpdaterApp.runtimeconfig.json
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\SGE.UpdaterApp.pdb
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\Guna.UI2.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\MetroFramework.Design.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\MetroFramework.Fonts.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\MetroFramework.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\System.Management.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\app.publish\runtimes\win\lib\net6.0\System.Management.dll
