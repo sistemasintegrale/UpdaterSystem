@@ -1,0 +1,15 @@
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.exe
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.deps.json
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.runtimeconfig.json
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.pdb
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.AssemblyReference.cache
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfoInputs.cache
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfo.cs
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\refint\ConsoleApp1.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.pdb
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.genruntimeconfig.cache
+D:\PROYECTOS RAFHAEL\UpdaterSystem\UpdaterApp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ref\ConsoleApp1.dll

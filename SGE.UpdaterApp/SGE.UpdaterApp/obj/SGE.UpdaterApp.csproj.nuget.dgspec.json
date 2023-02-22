@@ -46,13 +46,25 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "FontAwesome.Sharp": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
             "Guna.UI2.WinForms": {
               "target": "Package",
-              "version": "[2.0.4.2, )"
+              "version": "[2.0.4.4, )"
             },
             "MetroModernUI": {
               "target": "Package",
               "version": "[1.4.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.SqlServer.Server": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

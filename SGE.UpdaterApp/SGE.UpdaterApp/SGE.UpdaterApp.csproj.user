@@ -7,5 +7,17 @@
     <Compile Update="Begin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmActualizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmConfigurarEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmDatosEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MsgShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
