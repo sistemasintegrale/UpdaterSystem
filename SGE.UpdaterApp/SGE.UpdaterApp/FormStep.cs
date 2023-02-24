@@ -83,13 +83,18 @@ namespace SGE.UpdaterApp
                 procesoExtaccion.StartInfo = informacionProcceso;
                 procesoExtaccion.Start();
 
+
+                ////INSERTAMOS EN LA BASE DE DATOS
+                //objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
+                //objEquipo.ceq_sfecha_actualizacion = DateTime.Now;
+                //objEquipo.ceq_vnombre_equipo = this.Text;
+                //new GeneralData().Equipo_Insertar(objEquipo);
+                //MODIFICAMOS EN LA BASE DE DATOS
+                objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
+                objEquipo.ceq_sfecha_actualizacion = DateTime.Now;
+                new GeneralData().Equipo_Modificar(objEquipo);
                 if (indicador == instalado)
                 {
-                    //INSERTAMOS EN LA BASE DE DATOS
-                    objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
-                    objEquipo.ceq_sfecha_actualizacion = DateTime.Now;
-                    objEquipo.ceq_vnombre_equipo = this.Text;
-                    new GeneralData().Equipo_Insertar(objEquipo);
                     Instalacion frm = new Instalacion();
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
@@ -99,10 +104,7 @@ namespace SGE.UpdaterApp
                 }
                 else
                 {
-                    //MODIFICAMOS EN LA BASE DE DATOS
-                    objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
-                    objEquipo.ceq_sfecha_actualizacion = DateTime.Now;
-                    new GeneralData().Equipo_Modificar(objEquipo);
+                    
                     Process.Start(new ProcessStartInfo { FileName = objEquipo.cep_vubicacion_sistema + @"\SGE.WindowForms.application", UseShellExecute = true });
                     Application.Exit();
                 }
@@ -205,7 +207,7 @@ namespace SGE.UpdaterApp
         {
             //VERIFICAR SI EL EQUIPO ESTA REGISTRADO            
             objEquipo = new GeneralData().Equipo_Obtner_Datos(this.Text);
-            if (objEquipo is null)
+            if (objEquipo.ceq_icod_equipo == 0)
             {
                 MsgShow msg = new MsgShow(Constantes.msgError, $"El equipo {this.Text} no tiene permisos para el sistema");
                 if (msg.ShowDialog() == DialogResult.OK)
