@@ -4,16 +4,10 @@
     <_LastSelectedProfileId>D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Begin.cs">
+    <Compile Update="FormStep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmActualizador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FrmConfigurarEquipo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FrmDatosEquipo.cs">
+    <Compile Update="Instalacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MsgShow.cs">

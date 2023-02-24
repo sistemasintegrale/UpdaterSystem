@@ -15,5 +15,7 @@ namespace SGE.UpdaterApp.Entities
         public string usua_password_usuario { get; set; } = string.Empty;
         public bool usua_iactivo { get; set; }
         public string strEstado { get; set; } = string.Empty;
+
+        public int connection { get; set; }
     }
 }

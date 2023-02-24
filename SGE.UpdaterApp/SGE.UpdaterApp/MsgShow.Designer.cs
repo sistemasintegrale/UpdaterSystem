@@ -69,7 +69,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(92, 116);
+            this.guna2Button1.Location = new System.Drawing.Point(91, 130);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.guna2Button1.Size = new System.Drawing.Size(104, 29);
@@ -91,7 +91,7 @@
             this.lblMensaje.Location = new System.Drawing.Point(63, 87);
             this.lblMensaje.Multiline = true;
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(186, 28);
+            this.lblMensaje.Size = new System.Drawing.Size(186, 37);
             this.lblMensaje.TabIndex = 4;
             this.lblMensaje.Text = "mensaje";
             this.lblMensaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(298, 157);
+            this.ClientSize = new System.Drawing.Size(298, 171);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.picImage);

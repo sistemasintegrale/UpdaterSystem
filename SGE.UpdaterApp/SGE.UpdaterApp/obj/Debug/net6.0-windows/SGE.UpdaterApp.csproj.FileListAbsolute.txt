@@ -7,10 +7,6 @@ D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.
 D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\Interop.TxDerived.dll
 D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\Interop.OleDbSrc.dll
 D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.csproj.ResolveComReference.cache
-D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.Begin.resources
-D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.FrmActualizador.resources
-D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.FrmConfigurarEquipo.resources
-D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.FrmDatosEquipo.resources
 D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.MsgShow.resources
 D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.Properties.Resources.resources
 D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.csproj.GenerateResource.cache
@@ -60,3 +56,5 @@ D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.
 D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.pdb
 D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.genruntimeconfig.cache
 D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\ref\SGE.UpdaterApp.dll
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.FormStep.resources
+D:\PROYECTOS RAFHAEL\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.Instalacion.resources

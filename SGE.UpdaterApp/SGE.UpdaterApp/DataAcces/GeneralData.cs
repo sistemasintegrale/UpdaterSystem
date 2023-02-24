@@ -22,7 +22,7 @@ namespace SGE.UpdaterApp.DataAcces
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.CommandTimeout = int.MaxValue;
-                        cmd.Parameters.AddWithValue("@usua_secured_key", "");
+                        cmd.Parameters.AddWithValue("@usua_secured_key", "ACCESSKEY");
                         SqlDataReader reader = cmd.ExecuteReader();
                         while (reader.Read())
                         {

@@ -34,7 +34,7 @@ namespace SGE.UpdaterApp.Helpers
             {
                 key = key + CaseSwitchIn(pswd.Substring(i, 1));
             }
-            ProcessedKey = Encriptar(key, "pass3Dg@r1986", "3Dg@rClNto", "MD5", 1, "@1A2b3C4d5E6f7G8h9", 128); ;
+            ProcessedKey = Encriptar(key, "pass3Dg@r1986", "3Dg@rClNto", "MD5", 2, "@1A2b3C4d5E6f7G8", 128); ;
             return ProcessedKey;
         }
 
@@ -42,7 +42,7 @@ namespace SGE.UpdaterApp.Helpers
         {
             string key = "";
             string ProcessedKey = "";
-            ProcessedKey = Desencriptar(pswd, "pass3Dg@r1986", "3Dg@rClNto", "MD5", 1, "@1A2b3C4d5E6f7G8h9", 128); ;
+            ProcessedKey = Desencriptar(pswd, "pass3Dg@r1986", "3Dg@rClNto", "MD5", 1, "@1A2b3C4d5E6f7G8", 128); ;
             for (int i = 0; i < ProcessedKey.Length; i++)
             {
                 key = key + CaseSwitchOut(ProcessedKey.Substring(i, 1));

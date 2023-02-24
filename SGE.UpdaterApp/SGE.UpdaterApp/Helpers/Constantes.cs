@@ -28,6 +28,12 @@ namespace SGE.UpdaterApp.Helpers
         public static string rutaCarpetaInfo = @"C:\InfoUpdate";
 
         //
- 
+
+        public static List<int> conneciones = new();
+
+        public static int tabLogin = 0;
+        public static int tabSeleccionar = 1;
+        public static int tabInstalar = 2;
+        public static int tabActualizar = 3;
     }
 }
