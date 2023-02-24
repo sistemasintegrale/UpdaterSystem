@@ -88,10 +88,10 @@
             this.lblMensaje.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblMensaje.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMensaje.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMensaje.Location = new System.Drawing.Point(63, 87);
+            this.lblMensaje.Location = new System.Drawing.Point(24, 87);
             this.lblMensaje.Multiline = true;
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(186, 37);
+            this.lblMensaje.Size = new System.Drawing.Size(251, 37);
             this.lblMensaje.TabIndex = 4;
             this.lblMensaje.Text = "mensaje";
             this.lblMensaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
