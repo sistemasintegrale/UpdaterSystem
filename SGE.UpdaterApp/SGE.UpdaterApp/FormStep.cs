@@ -344,6 +344,12 @@ namespace SGE.UpdaterApp
                     Application.Exit();
                 }
             }
+            else
+            {
+                object sender = new object();
+                EventArgs e = new EventArgs();
+                btnActualizar_Click(sender, e);
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -391,6 +397,19 @@ namespace SGE.UpdaterApp
             {
                 tabActual = tabSiguiente;
             }
+        }
+
+        private void lkpSistema_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                guna2Button2_Click(sender, e);
+            }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

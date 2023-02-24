@@ -51,6 +51,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabLogin = new System.Windows.Forms.TabPage();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,6 +63,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.barInstall = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.TabActualizar = new System.Windows.Forms.TabPage();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.barActualizar = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.btnActualizar = new Guna.UI2.WinForms.Guna2Button();
             this.txtVersionDisponible = new Guna.UI2.WinForms.Guna2TextBox();
@@ -114,6 +117,8 @@
             // tabLogin
             // 
             this.tabLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.tabLogin.Controls.Add(this.iconButton1);
+            this.tabLogin.Controls.Add(this.metroLabel4);
             this.tabLogin.Controls.Add(this.guna2Button1);
             this.tabLogin.Controls.Add(this.txtContraseña);
             this.tabLogin.Controls.Add(this.txtUsuario);
@@ -124,6 +129,32 @@
             this.tabLogin.TabIndex = 0;
             this.tabLogin.Text = "Log";
             this.tabLogin.UseVisualStyleBackColor = true;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.iconButton1.IconColor = System.Drawing.Color.Red;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton1.IconSize = 23;
+            this.iconButton1.Location = new System.Drawing.Point(530, 6);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(27, 27);
+            this.iconButton1.TabIndex = 9;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel4.Location = new System.Drawing.Point(262, 11);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel4.TabIndex = 8;
+            this.metroLabel4.Text = "LOGIN";
+            this.metroLabel4.UseCompatibleTextRendering = true;
+            this.metroLabel4.UseCustomBackColor = true;
+            this.metroLabel4.UseCustomForeColor = true;
             // 
             // guna2Button1
             // 
@@ -138,7 +169,7 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = global::SGE.UpdaterApp.Properties.Resources.login_verde;
-            this.guna2Button1.Location = new System.Drawing.Point(202, 131);
+            this.guna2Button1.Location = new System.Drawing.Point(199, 150);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.guna2Button1.Size = new System.Drawing.Size(170, 36);
@@ -162,7 +193,7 @@
             this.txtContraseña.ForeColor = System.Drawing.Color.Silver;
             this.txtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtContraseña.IconLeft = global::SGE.UpdaterApp.Properties.Resources.password;
-            this.txtContraseña.Location = new System.Drawing.Point(139, 67);
+            this.txtContraseña.Location = new System.Drawing.Point(139, 93);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -190,7 +221,7 @@
             this.txtUsuario.ForeColor = System.Drawing.Color.Silver;
             this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsuario.IconLeft = global::SGE.UpdaterApp.Properties.Resources.user;
-            this.txtUsuario.Location = new System.Drawing.Point(139, 18);
+            this.txtUsuario.Location = new System.Drawing.Point(139, 44);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
             this.txtUsuario.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -214,6 +245,9 @@
             // 
             // guna2Button2
             // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.AnimatedGIF = true;
+            this.guna2Button2.BorderRadius = 15;
             this.guna2Button2.CustomizableEdges = customizableEdges7;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -221,7 +255,7 @@
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(184, 91);
+            this.guna2Button2.Location = new System.Drawing.Point(198, 110);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
@@ -232,6 +266,7 @@
             // lkpSistema
             // 
             this.lkpSistema.BackColor = System.Drawing.Color.Transparent;
+            this.lkpSistema.BorderRadius = 10;
             this.lkpSistema.CustomizableEdges = customizableEdges9;
             this.lkpSistema.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lkpSistema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -240,11 +275,12 @@
             this.lkpSistema.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lkpSistema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.lkpSistema.ItemHeight = 30;
-            this.lkpSistema.Location = new System.Drawing.Point(139, 41);
+            this.lkpSistema.Location = new System.Drawing.Point(144, 46);
             this.lkpSistema.Name = "lkpSistema";
             this.lkpSistema.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.lkpSistema.Size = new System.Drawing.Size(271, 36);
             this.lkpSistema.TabIndex = 2;
+            this.lkpSistema.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lkpSistema_KeyDown);
             // 
             // tabInstalar
             // 
@@ -263,11 +299,11 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(212, 52);
+            this.metroLabel1.Location = new System.Drawing.Point(197, 55);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(107, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(172, 25);
             this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Instalando...";
+            this.metroLabel1.Text = "Iniciando descarga...";
             this.metroLabel1.UseCompatibleTextRendering = true;
             this.metroLabel1.UseCustomBackColor = true;
             this.metroLabel1.UseCustomForeColor = true;
@@ -276,7 +312,7 @@
             // barInstall
             // 
             this.barInstall.CustomizableEdges = customizableEdges11;
-            this.barInstall.Location = new System.Drawing.Point(54, 100);
+            this.barInstall.Location = new System.Drawing.Point(53, 111);
             this.barInstall.Name = "barInstall";
             this.barInstall.ShadowDecoration.CustomizableEdges = customizableEdges12;
             this.barInstall.Size = new System.Drawing.Size(458, 30);
@@ -286,6 +322,7 @@
             // 
             // TabActualizar
             // 
+            this.TabActualizar.Controls.Add(this.metroLabel5);
             this.TabActualizar.Controls.Add(this.barActualizar);
             this.TabActualizar.Controls.Add(this.btnActualizar);
             this.TabActualizar.Controls.Add(this.txtVersionDisponible);
@@ -300,14 +337,28 @@
             this.TabActualizar.Text = "Actual";
             this.TabActualizar.UseVisualStyleBackColor = true;
             // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel5.Location = new System.Drawing.Point(178, 63);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(172, 25);
+            this.metroLabel5.TabIndex = 15;
+            this.metroLabel5.Text = "Iniciando descarga...";
+            this.metroLabel5.UseCompatibleTextRendering = true;
+            this.metroLabel5.UseCustomBackColor = true;
+            this.metroLabel5.UseCustomForeColor = true;
+            this.metroLabel5.UseStyleColors = true;
+            // 
             // barActualizar
             // 
             this.barActualizar.CustomizableEdges = customizableEdges13;
-            this.barActualizar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barActualizar.Location = new System.Drawing.Point(3, 171);
+            this.barActualizar.Location = new System.Drawing.Point(58, 108);
             this.barActualizar.Name = "barActualizar";
             this.barActualizar.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            this.barActualizar.Size = new System.Drawing.Size(557, 30);
+            this.barActualizar.Size = new System.Drawing.Size(442, 30);
             this.barActualizar.TabIndex = 14;
             this.barActualizar.Text = "guna2ProgressBar1";
             this.barActualizar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -324,12 +375,13 @@
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.Image = global::SGE.UpdaterApp.Properties.Resources.actualizar;
             this.btnActualizar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnActualizar.Location = new System.Drawing.Point(244, 107);
+            this.btnActualizar.Location = new System.Drawing.Point(626, 124);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.ShadowDecoration.CustomizableEdges = customizableEdges16;
             this.btnActualizar.Size = new System.Drawing.Size(180, 45);
             this.btnActualizar.TabIndex = 12;
             this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.Visible = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // txtVersionDisponible
@@ -346,7 +398,7 @@
             this.txtVersionDisponible.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVersionDisponible.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtVersionDisponible.IconLeft = global::SGE.UpdaterApp.Properties.Resources.refresh;
-            this.txtVersionDisponible.Location = new System.Drawing.Point(207, 66);
+            this.txtVersionDisponible.Location = new System.Drawing.Point(635, 82);
             this.txtVersionDisponible.Name = "txtVersionDisponible";
             this.txtVersionDisponible.PasswordChar = '\0';
             this.txtVersionDisponible.PlaceholderText = "";
@@ -354,6 +406,7 @@
             this.txtVersionDisponible.ShadowDecoration.CustomizableEdges = customizableEdges18;
             this.txtVersionDisponible.Size = new System.Drawing.Size(295, 36);
             this.txtVersionDisponible.TabIndex = 9;
+            this.txtVersionDisponible.Visible = false;
             // 
             // txtVersionInstalada
             // 
@@ -369,7 +422,7 @@
             this.txtVersionInstalada.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVersionInstalada.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtVersionInstalada.IconLeft = global::SGE.UpdaterApp.Properties.Resources.check;
-            this.txtVersionInstalada.Location = new System.Drawing.Point(207, 26);
+            this.txtVersionInstalada.Location = new System.Drawing.Point(635, 42);
             this.txtVersionInstalada.Name = "txtVersionInstalada";
             this.txtVersionInstalada.PasswordChar = '\0';
             this.txtVersionInstalada.PlaceholderText = "";
@@ -377,12 +430,13 @@
             this.txtVersionInstalada.ShadowDecoration.CustomizableEdges = customizableEdges20;
             this.txtVersionInstalada.Size = new System.Drawing.Size(295, 36);
             this.txtVersionInstalada.TabIndex = 8;
+            this.txtVersionInstalada.Visible = false;
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(47, 73);
+            this.metroLabel3.Location = new System.Drawing.Point(577, 89);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(161, 25);
             this.metroLabel3.TabIndex = 7;
@@ -390,12 +444,13 @@
             this.metroLabel3.UseCompatibleTextRendering = true;
             this.metroLabel3.UseCustomBackColor = true;
             this.metroLabel3.UseCustomForeColor = true;
+            this.metroLabel3.Visible = false;
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(47, 32);
+            this.metroLabel2.Location = new System.Drawing.Point(577, 48);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(148, 25);
             this.metroLabel2.TabIndex = 6;
@@ -403,6 +458,7 @@
             this.metroLabel2.UseCompatibleTextRendering = true;
             this.metroLabel2.UseCustomBackColor = true;
             this.metroLabel2.UseCustomForeColor = true;
+            this.metroLabel2.Visible = false;
             // 
             // guna2Elipse1
             // 
@@ -426,6 +482,7 @@
             this.Load += new System.EventHandler(this.FormStep_Load);
             this.guna2TabControl1.ResumeLayout(false);
             this.tabLogin.ResumeLayout(false);
+            this.tabLogin.PerformLayout();
             this.tabSeleccionar.ResumeLayout(false);
             this.tabInstalar.ResumeLayout(false);
             this.tabInstalar.PerformLayout();
@@ -457,5 +514,8 @@
         private Guna.UI2.WinForms.Guna2ProgressBar barActualizar;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
