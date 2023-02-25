@@ -104,7 +104,7 @@ namespace SGE.UpdaterApp
                 }
                 else
                 {
-                    
+
                     Process.Start(new ProcessStartInfo { FileName = objEquipo.cep_vubicacion_sistema + @"\SGE.WindowForms.application", UseShellExecute = true });
                     Application.Exit();
                 }
@@ -370,9 +370,12 @@ namespace SGE.UpdaterApp
                 //PRIMERO ELIMINAMOS LA VERSION ANTERIOR
                 pathAplicacion = pathPrincipal + @"\SGE.WindowForms.application";
                 string PathFiles = pathPrincipal + @"\Application Files";
-                Directory.Delete(PathFiles, true);
-                File.Delete(pathAplicacion);
-
+                if (Directory.Exists(PathFiles))
+                    Directory.Delete(PathFiles, true);
+                if (File.Exists(pathAplicacion))
+                    File.Delete(pathAplicacion);
+                if (File.Exists(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip"))
+                    File.Delete(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip");
                 //DESCARGAMOS DE DROPBOX
                 pathArchivoRar = objEquipo.cep_vubicacion_sistema + @"\" + objVersion.cvr_vversion + ".zip";
                 indicador = actualizando;
