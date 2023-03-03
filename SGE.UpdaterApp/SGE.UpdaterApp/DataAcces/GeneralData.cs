@@ -87,7 +87,7 @@ namespace SGE.UpdaterApp.DataAcces
                         cmd.Parameters.AddWithValue("@ceq_vnombre_equipo", objEquipo.ceq_vnombre_equipo);
                         cmd.Parameters.AddWithValue("@cvr_icod_version", objEquipo.cvr_icod_version);
                         cmd.Parameters.AddWithValue("@ceq_sfecha_actualizacion", objEquipo.ceq_sfecha_actualizacion);
-                        //cmd.Parameters.AddWithValue("@cep_vubicacion_sistema", objEquipo.cep_vubicacion_sistema);
+                        cmd.Parameters.AddWithValue("@cep_vubicacion_actualizador", objEquipo.cep_vubicacion_actualizador);
                         cmd.ExecuteNonQuery();
                     }
                 }

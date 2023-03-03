@@ -177,12 +177,7 @@ namespace SGE.UpdaterApp
                 Constantes.conneciones.Add(data.connection);
             });
 
-            string strHostName = Dns.GetHostName();
-            IPHostEntry ipEntry = new IPHostEntry();
-            ipEntry = Dns.GetHostEntry(strHostName);
-            string NombreEquipo = Convert.ToString(ipEntry.HostName);
-            this.Text = NombreEquipo;
-
+            
 
             EnabledControls(false);
 
@@ -260,6 +255,12 @@ namespace SGE.UpdaterApp
 
         private void FormStep_Load(object sender, EventArgs e)
         {
+            string strHostName = Dns.GetHostName();
+            IPHostEntry ipEntry = new IPHostEntry();
+            ipEntry = Dns.GetHostEntry(strHostName);
+            string NombreEquipo = Convert.ToString(ipEntry.HostName);
+            this.Text = NombreEquipo;
+
             //VERIFICA EXIXTENCIA DEL TXT
             if (File.Exists("C:\\SGIUSER\\userUpdate.txt"))
             {
