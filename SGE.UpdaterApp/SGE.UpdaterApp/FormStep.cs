@@ -37,6 +37,8 @@ namespace SGE.UpdaterApp
         bool enabledTabActualizar = false;
         int tabActual = 0;
         List<bool> tabs = new List<bool>();
+        string idCpu =  GetICPU.get();
+        public string pathSistema;
         public FormStep()
         {
             InitializeComponent();
@@ -66,10 +68,6 @@ namespace SGE.UpdaterApp
         private void cargado(object sender, AsyncCompletedEventArgs e)
         {
             Instalar();
-            if (indicador == instalado)
-            {
-
-            }
         }
 
         void Instalar()
@@ -79,33 +77,30 @@ namespace SGE.UpdaterApp
                 Process procesoExtaccion = new Process();
                 ProcessStartInfo informacionProcceso = new ProcessStartInfo();
                 informacionProcceso.FileName = @"C:\Program Files\WinRAR\WinRAR.exe";
-                informacionProcceso.Arguments = "x " + FormatoDoleComilal(pathArchivoRar) + " " + FormatoDoleComilal(objEquipo.cep_vubicacion_sistema);
+                informacionProcceso.Arguments = "x " + FormatoDoleComilal(pathArchivoRar) + " " + FormatoDoleComilal(pathSistema);
                 procesoExtaccion.StartInfo = informacionProcceso;
                 procesoExtaccion.Start();
 
 
-                ////INSERTAMOS EN LA BASE DE DATOS
-                //objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
-                //objEquipo.ceq_sfecha_actualizacion = DateTime.Now;
-                //objEquipo.ceq_vnombre_equipo = this.Text;
-                //new GeneralData().Equipo_Insertar(objEquipo);
+             
                 //MODIFICAMOS EN LA BASE DE DATOS
                 objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
                 objEquipo.ceq_sfecha_actualizacion = DateTime.Now;
                 new GeneralData().Equipo_Modificar(objEquipo);
                 if (indicador == instalado)
                 {
+                    this.Hide();
                     Instalacion frm = new Instalacion();
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
-                        Process.Start(new ProcessStartInfo { FileName = objEquipo.cep_vubicacion_sistema + @"\SGE.WindowForms.application", UseShellExecute = true });
+                        Process.Start(new ProcessStartInfo { FileName = pathSistema + @"\SGE.WindowForms.application", UseShellExecute = true });
                         Application.Exit();
                     }
                 }
                 else
                 {
-
-                    Process.Start(new ProcessStartInfo { FileName = objEquipo.cep_vubicacion_sistema + @"\SGE.WindowForms.application", UseShellExecute = true });
+                    this.Hide();
+                    Process.Start(new ProcessStartInfo { FileName = pathSistema + @"\SGE.WindowForms.application", UseShellExecute = true });
                     Application.Exit();
                 }
 
@@ -205,19 +200,30 @@ namespace SGE.UpdaterApp
 
         void verificar()
         {
-            //VERIFICAR SI EL EQUIPO ESTA REGISTRADO            
-            objEquipo = new GeneralData().Equipo_Obtner_Datos(this.Text);
-            if (objEquipo.ceq_icod_equipo == 0)
+            //VERIFICAR SI EL EQUIPO ESTA REGISTRADO
+           
+            objEquipo = new GeneralData().Equipo_Obtner_Datos(this.Text, idCpu);
+            if (objEquipo.cep_bflag_acceso == false)
             {
                 MsgShow msg = new MsgShow(Constantes.msgError, $"El equipo {this.Text} no tiene permisos para el sistema");
                 if (msg.ShowDialog() == DialogResult.OK)
                 {
+                    if (objEquipo.ceq_icod_equipo == 0 )
+                    {
+                        //INSERTAMOS EN LA BASE DE DATOS
+                        objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
+                        objEquipo.ceq_sfecha_actualizacion = (DateTime?)null;
+                        objEquipo.ceq_vnombre_equipo = this.Text;
+                        objEquipo.cep_vid_cpu = idCpu;
+                        new GeneralData().Equipo_Insertar(objEquipo);
+                    }
+                    
                     Application.Exit();
                 }
             }
 
             //VERIFICAMOS SI YA ESTA INSTALADO EL SISTEMA
-            string pathSistema = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
+             pathSistema = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
             if (!Directory.Exists(pathSistema))
             {
                 Directory.CreateDirectory(pathSistema);
@@ -238,21 +244,48 @@ namespace SGE.UpdaterApp
             guna2Button1.Enabled = enab;
         }
 
+        string[] LeerDatos(string ruta) {
+            string Linea;
+            string[] Valores = null!;
+            if (File.Exists(ruta))
+            {
+                using (StreamReader lector = new StreamReader(ruta))
+                {
+                    Linea = lector.ReadLine()!;
+                    Valores = Linea.Split(",".ToCharArray());
+                }
+            }
+            return Valores;
+        }
+
         private void FormStep_Load(object sender, EventArgs e)
         {
-            List<Usuario> list = new List<Usuario>();
-            for (int i = 1; i <= Constantes.ConnNovaMotos; i++)
+            //VERIFICA EXIXTENCIA DEL TXT
+            if (File.Exists("C:\\SGIUSER\\userUpdate.txt"))
             {
-                Constantes.Connection = i;
-                var lista = new GeneralData().listarUsuarios();
-                lista.ForEach((data) =>
-                {
-                    data.connection = i;
-
-                });
-                list.AddRange(lista);
+                string[] valores =  LeerDatos("C:\\SGIUSER\\userUpdate.txt");
+                Constantes.Connection = Convert.ToInt32(valores[2]);
+                File.Delete("C:\\SGIUSER\\userUpdate.txt");
+                verificar();
             }
-            mlist = list;
+            else
+            {
+                List<Usuario> list = new List<Usuario>();
+                for (int i = 1; i <= Constantes.ConnNovaMotos; i++)
+                {
+                    Constantes.Connection = i;
+                    var lista = new GeneralData().listarUsuarios();
+                    lista.ForEach((data) =>
+                    {
+                        data.connection = i;
+
+                    });
+                    list.AddRange(lista);
+                }
+                mlist = list;
+            }
+
+            
         }
 
         private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
@@ -298,8 +331,8 @@ namespace SGE.UpdaterApp
             guna2TabControl1.SelectedIndex = Constantes.tabInstalar;
             objVersion = new GeneralData().Listar_Versiones().OrderByDescending(x => x.cvr_sfecha_version).FirstOrDefault()!;
             string pathPrincipal = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
-            objEquipo.cep_vubicacion_sistema = pathPrincipal;
-            pathArchivoRar = objEquipo.cep_vubicacion_sistema + @"\" + objVersion.cvr_vversion + ".zip";
+            pathSistema = pathPrincipal;
+            pathArchivoRar = pathSistema + @"\" + objVersion.cvr_vversion + ".zip";
             cliente.DownloadFileAsync(new Uri(objVersion.cvr_vurl), pathArchivoRar);
 
         }
@@ -308,7 +341,7 @@ namespace SGE.UpdaterApp
         {
             tabs[Constantes.tabActualizar] = true;
             guna2TabControl1.SelectedIndex = Constantes.tabActualizar;
-            objEquipo = new GeneralData().Equipo_Obtner_Datos(this.Text);
+            objEquipo = new GeneralData().Equipo_Obtner_Datos(this.Text, idCpu);
             txtVersionInstalada.Text = objEquipo.cvr_vversion;
             ObtenerActualizaciones();
         }
@@ -363,7 +396,7 @@ namespace SGE.UpdaterApp
         private void Actualizar()
         {
 
-            string pathPrincipal = objEquipo.cep_vubicacion_sistema;
+            string pathPrincipal = pathSistema;
             try
             {
 
@@ -377,7 +410,7 @@ namespace SGE.UpdaterApp
                 if (File.Exists(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip"))
                     File.Delete(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip");
                 //DESCARGAMOS DE DROPBOX
-                pathArchivoRar = objEquipo.cep_vubicacion_sistema + @"\" + objVersion.cvr_vversion + ".zip";
+                pathArchivoRar = pathSistema + @"\" + objVersion.cvr_vversion + ".zip";
                 indicador = actualizando;
                 cliente.DownloadFileAsync(new Uri(objVersion.cvr_vurl), pathArchivoRar);
 
@@ -415,6 +448,16 @@ namespace SGE.UpdaterApp
         private void iconButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tabLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormStep_LocationChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

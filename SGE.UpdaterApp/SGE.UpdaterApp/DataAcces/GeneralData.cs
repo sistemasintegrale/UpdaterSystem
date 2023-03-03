@@ -60,8 +60,7 @@ namespace SGE.UpdaterApp.DataAcces
                         cmd.CommandTimeout = int.MaxValue;
                         cmd.Parameters.AddWithValue("@ceq_vnombre_equipo", objEquipo.ceq_vnombre_equipo);
                         cmd.Parameters.AddWithValue("@cvr_icod_version", objEquipo.cvr_icod_version);
-                        cmd.Parameters.AddWithValue("@ceq_sfecha_actualizacion", objEquipo.ceq_sfecha_actualizacion);
-                        cmd.Parameters.AddWithValue("@cep_vubicacion_sistema", objEquipo.cep_vubicacion_sistema);
+                        cmd.Parameters.AddWithValue("@cep_vid_cpu", objEquipo.cep_vid_cpu);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -88,7 +87,7 @@ namespace SGE.UpdaterApp.DataAcces
                         cmd.Parameters.AddWithValue("@ceq_vnombre_equipo", objEquipo.ceq_vnombre_equipo);
                         cmd.Parameters.AddWithValue("@cvr_icod_version", objEquipo.cvr_icod_version);
                         cmd.Parameters.AddWithValue("@ceq_sfecha_actualizacion", objEquipo.ceq_sfecha_actualizacion);
-                        cmd.Parameters.AddWithValue("@cep_vubicacion_sistema", objEquipo.cep_vubicacion_sistema);
+                        //cmd.Parameters.AddWithValue("@cep_vubicacion_sistema", objEquipo.cep_vubicacion_sistema);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -100,7 +99,7 @@ namespace SGE.UpdaterApp.DataAcces
             }
         }
 
-        internal ControlEquipos Equipo_Obtner_Datos(string nombre)
+        internal ControlEquipos Equipo_Obtner_Datos(string nombre, string idCpu)
         {
             ControlEquipos obj = new ControlEquipos();
             try
@@ -113,6 +112,7 @@ namespace SGE.UpdaterApp.DataAcces
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.CommandTimeout = int.MaxValue;
                         cmd.Parameters.AddWithValue("@nombre", nombre);
+                        cmd.Parameters.AddWithValue("@cep_vid_cpu", idCpu);
                         SqlDataReader reader = cmd.ExecuteReader();
                         while (reader.Read())
                         {
@@ -120,11 +120,15 @@ namespace SGE.UpdaterApp.DataAcces
                             obj.ceq_icod_equipo = Convert.ToInt32(reader["ceq_icod_equipo"]);
                             obj.ceq_vnombre_equipo = reader["ceq_vnombre_equipo"].ToString()!;
                             obj.cvr_icod_version = Convert.ToInt32(reader["cvr_icod_version"]);
-                            obj.ceq_sfecha_actualizacion = Convert.ToDateTime(reader["ceq_sfecha_actualizacion"]);
-                            obj.cep_vubicacion_sistema = reader["cep_vubicacion_sistema"].ToString()!;
+                            var data = reader["ceq_sfecha_actualizacion"];
+                            obj.ceq_sfecha_actualizacion = string.IsNullOrEmpty(data.ToString())? (DateTime?)null : Convert.ToDateTime(reader["ceq_sfecha_actualizacion"]);
                             obj.cvr_vversion = reader["cvr_vversion"].ToString()!;
-                            obj.cvr_sfecha_version = Convert.ToDateTime(reader["cvr_sfecha_version"]);
-
+                            data = reader["cvr_sfecha_version"];
+                            obj.cvr_sfecha_version = string.IsNullOrEmpty(data.ToString()) ? (DateTime?)null: Convert.ToDateTime(reader["cvr_sfecha_version"]);
+                            obj.cep_vubicacion_actualizador = reader["cep_vubicacion_actualizador"].ToString()!;
+                            obj.cep_vid_cpu = reader["cep_vid_cpu"].ToString()!;
+                            obj.cep_bflag_acceso = Convert.ToBoolean(reader["cep_bflag_acceso"]);
+                            obj.cep_vubicacion_actualizador = reader["cep_vubicacion_actualizador"].ToString()!;
                         }
                     }
                 }
@@ -202,7 +206,7 @@ namespace SGE.UpdaterApp.DataAcces
             }
             catch (Exception ex)
             {
-                 Console.WriteLine(ex);
+                Console.WriteLine(ex);
             }
             return lista;
         }
