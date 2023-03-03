@@ -39,6 +39,7 @@ namespace SGE.UpdaterApp
         List<bool> tabs = new List<bool>();
         string idCpu =  GetICPU.get();
         public string pathSistema;
+        public bool completado = false;
         public FormStep()
         {
             InitializeComponent();
@@ -70,6 +71,9 @@ namespace SGE.UpdaterApp
             Instalar();
         }
 
+ 
+
+
         void Instalar()
         {
             try
@@ -80,9 +84,8 @@ namespace SGE.UpdaterApp
                 informacionProcceso.Arguments = "x " + FormatoDoleComilal(pathArchivoRar) + " " + FormatoDoleComilal(pathSistema);
                 procesoExtaccion.StartInfo = informacionProcceso;
                 procesoExtaccion.Start();
+                Thread.Sleep(5000);
 
-
-             
                 //MODIFICAMOS EN LA BASE DE DATOS
                 objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
                 objEquipo.ceq_sfecha_actualizacion = DateTime.Now;
@@ -104,7 +107,6 @@ namespace SGE.UpdaterApp
                     Application.Exit();
                 }
 
-
             }
             catch (Exception ex)
             {
@@ -112,6 +114,8 @@ namespace SGE.UpdaterApp
                 Console.WriteLine(ex.ToString());
             }
         }
+
+
 
         private String FormatoDoleComilal(string sRuta)
         {
@@ -216,18 +220,25 @@ namespace SGE.UpdaterApp
                     Application.Exit();
                 }
             }
-
-            //VERIFICAMOS SI YA ESTA INSTALADO EL SISTEMA
-             pathSistema = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
-            if (!Directory.Exists(pathSistema))
-            {
-                Directory.CreateDirectory(pathSistema);
-                IrTabInstalacion();
-            }
             else
             {
-                IrTabActualizacion();
+                
+                pathSistema = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
+                if (!Directory.Exists(pathSistema))
+                {
+                    Directory.CreateDirectory(pathSistema);
+                  
+                    IrTabInstalacion();
+                }
+                else
+                {
+                    
+                    IrTabActualizacion();
+                }
             }
+
+            //VERIFICAMOS SI YA ESTA INSTALADO EL SISTEMA
+            
         }
 
 
@@ -460,5 +471,7 @@ namespace SGE.UpdaterApp
         {
 
         }
+
+ 
     }
 }
