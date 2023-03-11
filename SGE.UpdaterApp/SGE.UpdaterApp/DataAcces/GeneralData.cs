@@ -163,12 +163,12 @@ namespace SGE.UpdaterApp.DataAcces
                                 cvr_vversion = reader["cvr_vversion"].ToString()!,
                                 cvr_sfecha_version = Convert.ToDateTime(reader["cvr_sfecha_version"]),
                                 cvr_vurl = reader["cvr_vurl"].ToString()!,
-                            }); ;
+                            }); 
 
                         }
                     }
                 }
-            }
+            }   
             catch (Exception ex)
             {
                 Console.WriteLine(ex);

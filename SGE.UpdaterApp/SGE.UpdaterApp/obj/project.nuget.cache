@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3csewtliP5pmWSZRh3qjxSbu+NNNdp14MfrJlw62ZRnn+brHLO6YIEynlWemEgvb6+cjZyt8ZRos4DFZUh2C/w==",
+  "dgSpecHash": "M5PDeE6YgAZgG83gYSU12WFi9gb5theHTkf5Co5R+THb9pYNXwOLMBEU77IkovvlAeXij9kNOLdJpFQwzmsh2A==",
   "success": true,
-  "projectFilePath": "D:\\PROYECTOS RAFHAEL\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\SGE.UpdaterApp.csproj",
+  "projectFilePath": "D:\\PROYECTOS RAFHAEL\\SOLUCIONES\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\SGE.UpdaterApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ROBERTO\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ROBERTO\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

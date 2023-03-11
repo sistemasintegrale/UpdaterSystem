@@ -13,6 +13,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Interop;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SGE.UpdaterApp
@@ -20,6 +21,7 @@ namespace SGE.UpdaterApp
 
     public partial class FormStep : Form
     {
+        Guna2MessageDialog msg = new Guna2MessageDialog();
         private ControlVersiones objVersion = new ControlVersiones();
         private ControlEquipos objEquipo = new ControlEquipos();
         string pathArchivoRar;
@@ -132,14 +134,27 @@ namespace SGE.UpdaterApp
                     break;
                 case 1:
                     mensaje = "Contraseña Incorrecta";
-                    MsgShow msgShow = new MsgShow(Constantes.msgError, mensaje);
-                    msgShow.ShowDialog();
+                      msg = new Guna2MessageDialog();
+                    msg.Caption = "Información del Sistema";
+                    msg.Text = mensaje;
+                    msg.Buttons = MessageDialogButtons.OK;
+                    msg.Style = MessageDialogStyle.Light;
+                    msg.Icon = MessageDialogIcon.Error;
+                    msg.Parent = this;
+                    msg.Show();
+
                     break;
                 case 2:
 
                     mensaje = "Nombre de usuario no existe";
-                    MsgShow msgShow2 = new MsgShow(Constantes.msgError, mensaje);
-                    msgShow2.ShowDialog();
+                      msg = new Guna2MessageDialog();
+                    msg.Caption = "Información del Sistema";
+                    msg.Text = mensaje;
+                    msg.Buttons = MessageDialogButtons.OK;
+                    msg.Style = MessageDialogStyle.Light;
+                    msg.Icon = MessageDialogIcon.Error;
+                    msg.Parent = this;
+                    msg.Show();
                     break;
             }
         }
@@ -204,8 +219,15 @@ namespace SGE.UpdaterApp
             objEquipo = new GeneralData().Equipo_Obtner_Datos(this.Text, idCpu);
             if (objEquipo.cep_bflag_acceso == false)
             {
-                MsgShow msg = new MsgShow(Constantes.msgError, $"El equipo {this.Text} no tiene permisos para el sistema");
-                if (msg.ShowDialog() == DialogResult.OK)
+                //MsgShow msg = new MsgShow(Constantes.msgError, $"El equipo {this.Text} no tiene permisos para el sistema");
+                msg = new Guna2MessageDialog();
+                msg.Caption = "Información del Sistema";
+                msg.Text = $"Equipo sin permisos, reintentar?";
+                msg.Buttons = MessageDialogButtons.OKCancel;
+                msg.Style = MessageDialogStyle.Light;
+                msg.Icon = MessageDialogIcon.Warning;
+                msg.Parent = this;
+                if (msg.Show() == DialogResult.OK)
                 {
                     if (objEquipo.ceq_icod_equipo == 0 )
                     {
@@ -216,7 +238,21 @@ namespace SGE.UpdaterApp
                         objEquipo.cep_vid_cpu = idCpu;
                         new GeneralData().Equipo_Insertar(objEquipo);
                     }
-                    
+
+                    verificar();
+                }
+                else
+                {
+                    if (objEquipo.ceq_icod_equipo == 0)
+                    {
+                        //INSERTAMOS EN LA BASE DE DATOS
+                        objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
+                        objEquipo.ceq_sfecha_actualizacion = (DateTime?)null;
+                        objEquipo.ceq_vnombre_equipo = this.Text;
+                        objEquipo.cep_vid_cpu = idCpu;
+                        new GeneralData().Equipo_Insertar(objEquipo);
+                    }
+
                     Application.Exit();
                 }
             }
