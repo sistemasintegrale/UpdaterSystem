@@ -39,7 +39,7 @@ namespace SGE.UpdaterApp
         bool enabledTabActualizar = false;
         int tabActual = 0;
         List<bool> tabs = new List<bool>();
-        string idCpu =  GetICPU.get();
+        string idCpu = GetICPU.get();
         public string pathSistema;
         public bool completado = false;
         public FormStep()
@@ -73,7 +73,7 @@ namespace SGE.UpdaterApp
             Instalar();
         }
 
- 
+
 
 
         void Instalar()
@@ -134,7 +134,7 @@ namespace SGE.UpdaterApp
                     break;
                 case 1:
                     mensaje = "Contraseña Incorrecta";
-                      msg = new Guna2MessageDialog();
+                    msg = new Guna2MessageDialog();
                     msg.Caption = "Información del Sistema";
                     msg.Text = mensaje;
                     msg.Buttons = MessageDialogButtons.OK;
@@ -147,7 +147,7 @@ namespace SGE.UpdaterApp
                 case 2:
 
                     mensaje = "Nombre de usuario no existe";
-                      msg = new Guna2MessageDialog();
+                    msg = new Guna2MessageDialog();
                     msg.Caption = "Información del Sistema";
                     msg.Text = mensaje;
                     msg.Buttons = MessageDialogButtons.OK;
@@ -196,7 +196,7 @@ namespace SGE.UpdaterApp
                 Constantes.conneciones.Add(data.connection);
             });
 
-            
+
 
             EnabledControls(false);
 
@@ -215,7 +215,7 @@ namespace SGE.UpdaterApp
         void verificar()
         {
             //VERIFICAR SI EL EQUIPO ESTA REGISTRADO
-           
+
             objEquipo = new GeneralData().Equipo_Obtner_Datos(this.Text, idCpu);
             if (objEquipo.cep_bflag_acceso == false)
             {
@@ -229,7 +229,7 @@ namespace SGE.UpdaterApp
                 msg.Parent = this;
                 if (msg.Show() == DialogResult.OK)
                 {
-                    if (objEquipo.ceq_icod_equipo == 0 )
+                    if (objEquipo.ceq_icod_equipo == 0)
                     {
                         //INSERTAMOS EN LA BASE DE DATOS
                         objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
@@ -258,23 +258,23 @@ namespace SGE.UpdaterApp
             }
             else
             {
-                
+
                 pathSistema = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
                 if (!Directory.Exists(pathSistema))
                 {
                     Directory.CreateDirectory(pathSistema);
-                  
+
                     IrTabInstalacion();
                 }
                 else
                 {
-                    
+
                     IrTabActualizacion();
                 }
             }
 
             //VERIFICAMOS SI YA ESTA INSTALADO EL SISTEMA
-            
+
         }
 
 
@@ -286,7 +286,8 @@ namespace SGE.UpdaterApp
             guna2Button1.Enabled = enab;
         }
 
-        string[] LeerDatos(string ruta) {
+        string[] LeerDatos(string ruta)
+        {
             string Linea;
             string[] Valores = null!;
             if (File.Exists(ruta))
@@ -311,7 +312,7 @@ namespace SGE.UpdaterApp
             //VERIFICA EXIXTENCIA DEL TXT
             if (File.Exists("C:\\SGIUSER\\userUpdate.txt"))
             {
-                string[] valores =  LeerDatos("C:\\SGIUSER\\userUpdate.txt");
+                string[] valores = LeerDatos("C:\\SGIUSER\\userUpdate.txt");
                 Constantes.Connection = Convert.ToInt32(valores[2]);
                 File.Delete("C:\\SGIUSER\\userUpdate.txt");
                 verificar();
@@ -333,7 +334,7 @@ namespace SGE.UpdaterApp
                 mlist = list;
             }
 
-            
+
         }
 
         private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
@@ -508,6 +509,6 @@ namespace SGE.UpdaterApp
 
         }
 
- 
+
     }
 }

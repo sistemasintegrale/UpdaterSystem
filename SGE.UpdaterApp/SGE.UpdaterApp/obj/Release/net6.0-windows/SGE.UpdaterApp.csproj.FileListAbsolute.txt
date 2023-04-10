@@ -125,7 +125,3 @@ D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.dll.config
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.csproj.SuggestedBindingRedirects.cache
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.dll.config
-D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.dll.manifest
-D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.application
-D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.dll.manifest
-D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.application
