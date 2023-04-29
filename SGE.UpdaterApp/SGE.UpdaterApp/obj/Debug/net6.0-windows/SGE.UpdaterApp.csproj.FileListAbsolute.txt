@@ -118,3 +118,6 @@ D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.pdb
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.genruntimeconfig.cache
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\ref\SGE.UpdaterApp.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Debug\net6.0-windows\SGE.UpdaterApp.dll.config
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.csproj.SuggestedBindingRedirects.cache
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Debug\net6.0-windows\SGE.UpdaterApp.dll.config

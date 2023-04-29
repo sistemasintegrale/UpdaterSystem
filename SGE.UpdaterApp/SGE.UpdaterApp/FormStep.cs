@@ -320,7 +320,7 @@ namespace SGE.UpdaterApp
             else
             {
                 List<Usuario> list = new List<Usuario>();
-                for (int i = 1; i <= Constantes.ConnNovaMotos; i++)
+                for (int i = 1; i <= Constantes.TotalConecciones; i++)
                 {
                     Constantes.Connection = i;
                     var lista = new GeneralData().listarUsuarios();
@@ -368,6 +368,8 @@ namespace SGE.UpdaterApp
                 { var obj5 = new Empresas(); obj5.Id = Constantes.ConnNovaFlat; obj5.Name = "NOVA FLAT"; list.Add(obj5); }
                 if (x == Constantes.ConnNovaMotos)
                 { var obj6 = new Empresas(); obj6.Id = Constantes.ConnNovaMotos; obj6.Name = "NOVA MOTOS"; list.Add(obj6); }
+                if (x == Constantes.ConnCalzadosJaguar)
+                { var obj7 = new Empresas(); obj7.Id = Constantes.ConnCalzadosJaguar; obj7.Name = "CALZADOS JAGUAR"; list.Add(obj7); }
             });
 
             BSControls.Guna2Combo(lkpSistema, list, "Name", "Id", true);
