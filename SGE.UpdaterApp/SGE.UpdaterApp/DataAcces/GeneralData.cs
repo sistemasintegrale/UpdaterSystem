@@ -44,7 +44,7 @@ namespace SGE.UpdaterApp.DataAcces
             {
                 Console.WriteLine(ex);
             }
-            return list;
+            return list;    
         }
 
         internal void Equipo_Insertar(ControlEquipos objEquipo)
