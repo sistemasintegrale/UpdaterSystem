@@ -370,6 +370,8 @@ namespace SGE.UpdaterApp
                 { var obj6 = new Empresas(); obj6.Id = Constantes.ConnNovaMotos; obj6.Name = "NOVA MOTOS"; list.Add(obj6); }
                 if (x == Constantes.ConnCalzadosJaguar)
                 { var obj7 = new Empresas(); obj7.Id = Constantes.ConnCalzadosJaguar; obj7.Name = "CALZADOS JAGUAR"; list.Add(obj7); }
+                if (x == Constantes.ConnPradosVerdes)
+                { var obj8 = new Empresas(); obj8.Id = Constantes.ConnPradosVerdes; obj8.Name = "PRADOS VERDES"; list.Add(obj8); }
             });
 
             BSControls.Guna2Combo(lkpSistema, list, "Name", "Id", true);
