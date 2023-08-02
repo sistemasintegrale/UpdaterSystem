@@ -372,6 +372,8 @@ namespace SGE.UpdaterApp
                 { var obj7 = new Empresas(); obj7.Id = Constantes.ConnCalzadosJaguar; obj7.Name = "CALZADOS JAGUAR"; list.Add(obj7); }
                 if (x == Constantes.ConnPradosVerdes)
                 { var obj8 = new Empresas(); obj8.Id = Constantes.ConnPradosVerdes; obj8.Name = "PRADOS VERDES"; list.Add(obj8); }
+                if (x == Constantes.ConnTelasLima)
+                { var obj9 = new Empresas(); obj9.Id = Constantes.ConnPradosVerdes; obj9.Name = "TELAS LIMA"; list.Add(obj9); }
             });
 
             BSControls.Guna2Combo(lkpSistema, list, "Name", "Id", true);
@@ -456,10 +458,16 @@ namespace SGE.UpdaterApp
                 //PRIMERO ELIMINAMOS LA VERSION ANTERIOR
                 pathAplicacion = pathPrincipal + @"\SGE.WindowForms.application";
                 string PathFiles = pathPrincipal + @"\Application Files";
+                string PathSetup = pathPrincipal + @"\setup.exe";
+                string PathAutoRun= pathPrincipal + @"\autorun.inf";
                 if (Directory.Exists(PathFiles))
                     Directory.Delete(PathFiles, true);
                 if (File.Exists(pathAplicacion))
                     File.Delete(pathAplicacion);
+                if (File.Exists(PathSetup))
+                    File.Delete(PathSetup);
+                if (File.Exists(PathAutoRun))  
+                    File.Delete(PathAutoRun);
                 if (File.Exists(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip"))
                     File.Delete(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip");
                 //DESCARGAMOS DE DROPBOX
