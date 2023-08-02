@@ -296,22 +296,31 @@
       <dsig:DigestValue>c5VBBfdUt66SNoPiU7nI2DXw9zWTcQYVlT9azg7TmUs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SGE.UpdaterApp.dll" size="441344">
+  <file name="SGE.UpdaterApp.dll" size="446976">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Zo1Z70mlm4xIk5Uy+oNRaqaPSmoJTGMp0utu3YoiyzM=</dsig:DigestValue>
+      <dsig:DigestValue>fMbe8hq9W1oWFNuQfk2mpZ1QeCyx3IazwgGaZYKqgbo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SGE.UpdaterApp.exe" size="147456">
+  <file name="SGE.UpdaterApp.dll.config" size="40322">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>LiMkLnfcKNp2Ldo9c5gtW7anfUOw/Q5PwYO2Bxm86GE=</dsig:DigestValue>
+      <dsig:DigestValue>v0BAzZ/1+zi4URt9h3OE6F2nUwvcJpdvW/xDr8ZdVsg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SGE.UpdaterApp.exe" size="147968">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iYGwF57CIqKCi6X2TPEkfipGw8JoVPIa0VIxBwyI6OI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SGE.UpdaterApp.runtimeconfig.json" size="372">

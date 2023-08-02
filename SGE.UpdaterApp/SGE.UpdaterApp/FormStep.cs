@@ -373,7 +373,7 @@ namespace SGE.UpdaterApp
                 if (x == Constantes.ConnPradosVerdes)
                 { var obj8 = new Empresas(); obj8.Id = Constantes.ConnPradosVerdes; obj8.Name = "PRADOS VERDES"; list.Add(obj8); }
                 if (x == Constantes.ConnTelasLima)
-                { var obj9 = new Empresas(); obj9.Id = Constantes.ConnPradosVerdes; obj9.Name = "TELAS LIMA"; list.Add(obj9); }
+                { var obj9 = new Empresas(); obj9.Id = Constantes.ConnTelasLima; obj9.Name = "TELAS LIMA"; list.Add(obj9); }
             });
 
             BSControls.Guna2Combo(lkpSistema, list, "Name", "Id", true);
