@@ -19,8 +19,9 @@ namespace SGE.UpdaterApp.Helpers
         public static int ConnCalzadosJaguar = 7;
         public static int ConnPradosVerdes = 8;
         public static int ConnTelasLima = 9;
+        public static int ConnUlike = 10;
 
-        public static int TotalConecciones = 9;
+        public static int TotalConecciones = 10;
         //
 
         public static int msgAlert = 1;

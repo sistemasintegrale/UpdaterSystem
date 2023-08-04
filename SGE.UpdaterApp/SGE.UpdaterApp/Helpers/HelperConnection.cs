@@ -41,6 +41,9 @@ namespace SGE.UpdaterApp.Helpers
                 case 9: //TELAS LIMA
                     strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=telaslima_com_TL;Persist Security Info=True;User ID=sistemasintegrales_com_de;Password=rogola2012;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
                     break;
+                case 10: //Ulike
+                    strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=telaslima_com_UL;Persist Security Info=True;User ID=sistemasintegrales_com_de;Password=rogola2012;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
+                    break;
             }
             return strConexion;
         }
@@ -76,6 +79,9 @@ namespace SGE.UpdaterApp.Helpers
                     break;
                 case 9: // TELAS LIMA
                     strConexion = "Telas-Lima";
+                    break;
+                case 10: // ULIKE
+                    strConexion = "Ulike";
                     break;
             }
             return strConexion;
