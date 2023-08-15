@@ -119,7 +119,8 @@ namespace SGE.UpdaterApp.DataAcces
 
                             obj.ceq_icod_equipo = Convert.ToInt32(reader["ceq_icod_equipo"]);
                             obj.ceq_vnombre_equipo = reader["ceq_vnombre_equipo"].ToString()!;
-                            obj.cvr_icod_version = Convert.ToInt32(reader["cvr_icod_version"]);
+                            var version = reader["cvr_icod_version"].ToString();
+                            obj.cvr_icod_version = string.IsNullOrEmpty(version)? 0: Convert.ToInt32(version);
                             var data = reader["ceq_sfecha_actualizacion"];
                             obj.ceq_sfecha_actualizacion = string.IsNullOrEmpty(data.ToString())? (DateTime?)null : Convert.ToDateTime(reader["ceq_sfecha_actualizacion"]);
                             obj.cvr_vversion = reader["cvr_vversion"].ToString()!;
