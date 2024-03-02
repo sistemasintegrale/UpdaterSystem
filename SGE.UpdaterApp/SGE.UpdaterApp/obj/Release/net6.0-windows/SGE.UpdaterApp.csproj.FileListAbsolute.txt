@@ -116,7 +116,6 @@ D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.AssemblyInfoInputs.cache
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.AssemblyInfo.cs
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.csproj.CoreCompileInputs.cache
-D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.csproj.CopyComplete
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.dll
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\refint\SGE.UpdaterApp.dll
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.pdb
@@ -125,7 +124,119 @@ D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.dll.config
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.csproj.SuggestedBindingRedirects.cache
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.dll.config
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.sourcelink.json
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.Upda.C5D0DBB7.Up2Date
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Web.WebView2.Core.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x64\native\msalruntime.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.dll.manifest
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.application
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.dll.manifest
 D:\PROYECTOS RAFHAEL\SOLUCIONES\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.application
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.exe
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.dll.config
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.deps.json
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.runtimeconfig.json
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.pdb
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Azure.Core.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Azure.Identity.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\FontAwesome.Sharp.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Guna.UI2.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\MetroFramework.Design.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\MetroFramework.Fonts.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\MetroFramework.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Data.SqlClient.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Identity.Client.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.SqlServer.Server.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Web.WebView2.Core.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\System.Configuration.ConfigurationManager.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\System.Management.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\System.Memory.Data.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\System.Runtime.Caching.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x64\native\msalruntime.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.csproj.AssemblyReference.cache
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.csproj.SuggestedBindingRedirects.cache
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.dll.config
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\Interop.TxDataConvert.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\Interop.TxSplit.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\Interop.TxBDD.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\Interop.TxAgg.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\Interop.TxLookup.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\Interop.TxDerived.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\Interop.OleDbSrc.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.csproj.ResolveComReference.cache
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.FormStep.resources
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.Instalacion.resources
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.MsgShow.resources
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.Properties.Resources.resources
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.csproj.GenerateResource.cache
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.AssemblyInfoInputs.cache
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.AssemblyInfo.cs
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.csproj.CoreCompileInputs.cache
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.sourcelink.json
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.Upda.C5D0DBB7.Up2Date
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\refint\SGE.UpdaterApp.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.pdb
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.genruntimeconfig.cache
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\ref\SGE.UpdaterApp.dll
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.dll.manifest
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\bin\Release\net6.0-windows\SGE.UpdaterApp.application
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.dll.manifest
+D:\UpdaterSystem\SGE.UpdaterApp\SGE.UpdaterApp\obj\Release\net6.0-windows\SGE.UpdaterApp.application
