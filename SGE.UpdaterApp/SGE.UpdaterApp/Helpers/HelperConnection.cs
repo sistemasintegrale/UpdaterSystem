@@ -44,6 +44,9 @@ namespace SGE.UpdaterApp.Helpers
                 case 10: //ULIKE
                     strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=telaslima_com_UL;Persist Security Info=True;User ID=sistemasintegrales_com_de;Password=rogola2012;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
                     break;
+                case 11: //MULTISISTEMA
+                    strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=sistemasintegrales_com_prueba;Persist Security Info=True;User ID=sistemasintegrales_com_de;Password=rogola2012;MultipleActiveResultSets = True;TrustServerCertificate = False;Encrypt = False";
+                    break;
             }
             return strConexion;
         }
@@ -82,6 +85,9 @@ namespace SGE.UpdaterApp.Helpers
                     break;
                 case 10: // ULIKE
                     strConexion = "Ulike";
+                    break;
+                case 11: // Multisistema
+                    strConexion = "Multisistema";
                     break;
             }
             return strConexion;

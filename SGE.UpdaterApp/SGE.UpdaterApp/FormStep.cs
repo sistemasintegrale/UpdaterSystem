@@ -376,6 +376,8 @@ namespace SGE.UpdaterApp
                 { var obj9 = new Empresas(); obj9.Id = Constantes.ConnTelasLima; obj9.Name = "TELAS LIMA"; list.Add(obj9); }
                 if (x == Constantes.ConnUlike)
                 { var obj10 = new Empresas(); obj10.Id = Constantes.ConnUlike; obj10.Name = "ULIKE"; list.Add(obj10); }
+                if (x == Constantes.ConnMultisistema)
+                { var obj11 = new Empresas(); obj11.Id = Constantes.ConnMultisistema; obj11.Name = "MULTISISTEMA"; list.Add(obj11); }
             });
 
             BSControls.Guna2Combo(lkpSistema, list, "Name", "Id", true);
