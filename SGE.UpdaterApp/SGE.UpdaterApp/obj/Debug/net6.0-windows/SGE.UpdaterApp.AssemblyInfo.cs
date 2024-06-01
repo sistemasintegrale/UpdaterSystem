@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SGE.UpdaterApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa292eef98490a18900684a101aa1a0ed82ecfc1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b222b6e09e2f57e756c727043294ab9570c4f58")]
 [assembly: System.Reflection.AssemblyProductAttribute("SGE.UpdaterApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SGE.UpdaterApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
