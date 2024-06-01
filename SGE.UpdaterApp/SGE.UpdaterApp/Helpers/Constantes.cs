@@ -20,7 +20,7 @@ namespace SGE.UpdaterApp.Helpers
         public static int ConnPradosVerdes = 8;
         public static int ConnTelasLima = 9;
         public static int ConnUlike = 10;
-        public static int ConnMultisistema = 10;
+        public static int ConnMultisistema = 11;
 
 
         public static int TotalConecciones = 11;
