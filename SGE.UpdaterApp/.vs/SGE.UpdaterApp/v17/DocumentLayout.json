@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\UpdaterSystem\\SGE.UpdaterApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\helpers\\helperconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\helpers\\helperconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\formstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\formstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|d:\\updatersystem\\sge.updaterapp\\sge.updaterapp\\instalacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\helpers\\constantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\helpers\\constantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\instalacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\instalacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\instalacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\instalacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|d:\\updatersystem\\sge.updaterapp\\sge.updaterapp\\helpers\\helperconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\helpers\\helperconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\entities\\usuario.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -31,20 +43,8 @@
       "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\formstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\formstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\helpers\\constantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\helpers\\constantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\formstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\formstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\instalacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|solutionrelative:sge.updaterapp\\instalacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53C41BE5-F26E-4879-9DF1-0FE9EFB17AE7}|SGE.UpdaterApp\\SGE.UpdaterApp.csproj|D:\\UpdaterSystem\\SGE.UpdaterApp\\sge.updaterapp\\helpers\\codec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,67 +82,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Instalacion.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "Instalacion.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Instalacion.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\Instalacion.cs",
-              "ToolTip": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Instalacion.cs [Design]",
-              "RelativeToolTip": "SGE.UpdaterApp\\Instalacion.cs [Design]",
+              "ToolTip": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Instalacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SGE.UpdaterApp\\Instalacion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-11-10T15:15:14.788Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Constantes.cs",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Helpers\\Constantes.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\Helpers\\Constantes.cs",
               "ToolTip": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Helpers\\Constantes.cs",
               "RelativeToolTip": "SGE.UpdaterApp\\Helpers\\Constantes.cs",
-              "ViewState": "AQIAAAoAAACAzMzMzAwjwCYAAAA0AAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAIAwwBcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-08-02T21:11:51.652Z"
+              "WhenOpened": "2023-08-02T21:11:51.652Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "HelperConnection.cs",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Helpers\\HelperConnection.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\Helpers\\HelperConnection.cs",
               "ToolTip": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Helpers\\HelperConnection.cs",
               "RelativeToolTip": "SGE.UpdaterApp\\Helpers\\HelperConnection.cs",
-              "ViewState": "AQIAABAAAADAZmZmZmYwwC8AAABtAAAA",
+              "ViewState": "AQIAADkAAACAZmZmZuYrwFQAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-06-13T23:55:38.775Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "FormStep.cs",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\FormStep.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\FormStep.cs",
               "ToolTip": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\FormStep.cs",
               "RelativeToolTip": "SGE.UpdaterApp\\FormStep.cs",
-              "ViewState": "AQIAAAMAAAAA9P////8qwJsBAAAYAAAA",
+              "ViewState": "AQIAAJkAAAAAAAAAAAArwKMAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-04-27T23:05:12.223Z"
+              "WhenOpened": "2023-04-27T23:05:12.223Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FormStep.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\FormStep.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\FormStep.cs",
               "ToolTip": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\FormStep.cs [Dise\u00F1o]",
               "RelativeToolTip": "SGE.UpdaterApp\\FormStep.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-04-27T23:05:10.032Z"
+              "WhenOpened": "2023-04-27T23:05:10.032Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Program.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\Program.cs",
@@ -154,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "GeneralData.cs",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\DataAcces\\GeneralData.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\DataAcces\\GeneralData.cs",
@@ -162,11 +165,12 @@
               "RelativeToolTip": "SGE.UpdaterApp\\DataAcces\\GeneralData.cs",
               "ViewState": "AQIAAHEAAAAA/f///z8rwBwAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-03-06T17:16:56.841Z"
+              "WhenOpened": "2023-03-06T17:16:56.841Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ControlEquipos.cs",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Entities\\ControlEquipos.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\Entities\\ControlEquipos.cs",
@@ -178,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "GetICPU.cs",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Helpers\\GetICPU.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\Helpers\\GetICPU.cs",
@@ -190,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Usuario.cs",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Entities\\Usuario.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\Entities\\Usuario.cs",
@@ -202,13 +206,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Instalacion.cs",
               "DocumentMoniker": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Instalacion.cs",
               "RelativeDocumentMoniker": "SGE.UpdaterApp\\Instalacion.cs",
               "ToolTip": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\Instalacion.cs",
               "RelativeToolTip": "SGE.UpdaterApp\\Instalacion.cs",
-              "ViewState": "AQIAAAYAAACQzMzMzEwswBEAAAAJAAAA",
+              "ViewState": "AQIAAA4AAADAMjMzM7MwwBoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-03-06T17:16:56.843Z",
               "EditorCaption": ""
