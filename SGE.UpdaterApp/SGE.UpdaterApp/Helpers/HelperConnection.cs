@@ -47,6 +47,9 @@ namespace SGE.UpdaterApp.Helpers
                 case 11: //MULTI EMPRESA
                     strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=real_invest_mmm_com_me;Persist Security Info=True;User ID=telaslima_com_de;Password=X3V!~OB@za;MultipleActiveResultSets = True;TrustServerCertificate = False;Encrypt = False";
                     break;
+                case 12: //JABSA
+                    strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=telaslima_com_GC;Persist Security Info=True;User ID=telaslima_com_de;Password=X3V!~OB@za;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
+                    break;
             }
             return strConexion;
         }
@@ -88,6 +91,9 @@ namespace SGE.UpdaterApp.Helpers
                     break;
                 case 11: // Multi Empresa
                     strConexion = "Multi-Empresa";
+                    break;
+                case 12:// JABSA
+                    strConexion = "Jabsa";
                     break;
             }
             return strConexion;
