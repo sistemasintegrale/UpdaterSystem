@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\SGE.UpdaterApp.csproj",
+      "projectUniqueName": "D:\\Control-actualizador\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\SGE.UpdaterApp.csproj",
       "projectName": "SGE.UpdaterApp",
-      "projectPath": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\SGE.UpdaterApp.csproj",
+      "projectPath": "D:\\Control-actualizador\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\SGE.UpdaterApp.csproj",
       "packagesPath": "C:\\Users\\ROBERTO\\.nuget\\packages\\",
-      "outputPath": "D:\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\obj\\",
+      "outputPath": "D:\\Control-actualizador\\UpdaterSystem\\SGE.UpdaterApp\\SGE.UpdaterApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

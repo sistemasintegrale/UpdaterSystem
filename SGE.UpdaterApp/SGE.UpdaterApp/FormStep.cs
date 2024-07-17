@@ -2,27 +2,21 @@
 using SGE.UpdaterApp.DataAcces;
 using SGE.UpdaterApp.Entities;
 using SGE.UpdaterApp.Helpers;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Interop;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SGE.UpdaterApp
 {
 
     public partial class FormStep : Form
     {
+        public bool pvt = false;
         Guna2MessageDialog msg = new Guna2MessageDialog();
         private ControlVersiones objVersion = new ControlVersiones();
+        private ControlVersionesPvt objVersionPvt = new ControlVersionesPvt();
+
         private ControlEquipos objEquipo = new ControlEquipos();
         string pathArchivoRar;
         private WebClient cliente;
@@ -89,7 +83,10 @@ namespace SGE.UpdaterApp
                 Thread.Sleep(5000);
 
                 //MODIFICAMOS EN LA BASE DE DATOS
-                objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
+                if (!pvt)
+                    objEquipo.cvr_icod_version = objVersion.cvr_icod_version;
+                if (pvt)
+                    objEquipo.cep_id_pvt = objVersionPvt.Id;
                 objEquipo.ceq_sfecha_actualizacion = DateTime.Now;
                 new GeneralData().Equipo_Modificar(objEquipo);
                 if (indicador == instalado)
@@ -119,7 +116,7 @@ namespace SGE.UpdaterApp
 
 
 
-        private String FormatoDoleComilal(string sRuta)
+        private string FormatoDoleComilal(string sRuta)
         {
             return Convert.ToChar(34).ToString() + sRuta + Convert.ToChar(34).ToString();
         }
@@ -260,6 +257,7 @@ namespace SGE.UpdaterApp
             {
 
                 pathSistema = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
+                if (pvt) pathSistema = pathSistema + "-pvt";
                 if (!Directory.Exists(pathSistema))
                 {
                     Directory.CreateDirectory(pathSistema);
@@ -313,6 +311,7 @@ namespace SGE.UpdaterApp
             if (File.Exists("C:\\SGIUSER\\userUpdate.txt"))
             {
                 string[] valores = LeerDatos("C:\\SGIUSER\\userUpdate.txt");
+                pvt = valores.Length == 5;
                 Constantes.Connection = Convert.ToInt32(valores[2]);
                 File.Delete("C:\\SGIUSER\\userUpdate.txt");
                 verificar();
@@ -390,11 +389,24 @@ namespace SGE.UpdaterApp
             tabs[Constantes.tabInstalar] = true;
             indicador = instalado;
             guna2TabControl1.SelectedIndex = Constantes.tabInstalar;
-            objVersion = new GeneralData().Listar_Versiones().OrderByDescending(x => x.cvr_sfecha_version).FirstOrDefault()!;
-            string pathPrincipal = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
-            pathSistema = pathPrincipal;
-            pathArchivoRar = pathSistema + @"\" + objVersion.cvr_vversion + ".zip";
-            cliente.DownloadFileAsync(new Uri(objVersion.cvr_vurl), pathArchivoRar);
+            if (pvt)
+            {
+                objVersionPvt = new GeneralData().Listar_Versiones_pvt().OrderByDescending(x => x.Fecha).FirstOrDefault()!;
+                string pathPrincipal = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
+                pathSistema = pathPrincipal + "-pvt";
+                pathArchivoRar = pathSistema + @"\" + objVersionPvt.Nombre + ".zip";
+                cliente.DownloadFileAsync(new Uri(objVersionPvt.Link), pathArchivoRar);
+
+            }
+            else
+            {
+                objVersion = new GeneralData().Listar_Versiones().OrderByDescending(x => x.cvr_sfecha_version).FirstOrDefault()!;
+                string pathPrincipal = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
+                pathSistema = pathPrincipal;
+                pathArchivoRar = pathSistema + @"\" + objVersion.cvr_vversion + ".zip";
+                cliente.DownloadFileAsync(new Uri(objVersion.cvr_vurl), pathArchivoRar);
+
+            }
 
         }
 
@@ -411,25 +423,77 @@ namespace SGE.UpdaterApp
         {
             Constantes.Connection = Convert.ToInt32(lkpSistema.SelectedValue);
             tabs[Constantes.tabSeleccionar] = false;
-            verificar();
+            if (!VerificarPvt())
+            {
+                verificar();
+            }
+            else
+            {
+                CargarPvt();
+            }
+
+        }
+
+        class PvtEmpresa
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+        }
+
+        public bool VerificarPvt()
+        {
+            return new GeneralData().Listar_Versiones_pvt().Any();
+        }
+
+        void CargarPvt()
+        {
+            guna2TabControl1.SelectedIndex = Constantes.tabSelectPvt;
+            var lista = new List<PvtEmpresa>
+            {
+                new PvtEmpresa { Id = 1, Name = "Sistema Principal" },
+                new PvtEmpresa { Id = 2, Name = "Punto de Venta" }
+            };
+            BSControls.Guna2Combo(lkpSelectPvt, lista, "Name", "Id", true);
+
         }
 
         void ObtenerActualizaciones()
         {
-            objVersion = new GeneralData().Listar_Versiones().OrderByDescending(x => x.cvr_sfecha_version).FirstOrDefault()!;
-            txtVersionDisponible.Text = objVersion is null ? "" : objVersion.cvr_vversion;
-            if (objVersion is not null)
+            if (pvt)
             {
-                if (objVersion.cvr_icod_version == objEquipo.cvr_icod_version)
-                    btnActualizar.Enabled = false;
+                objVersionPvt = new GeneralData().Listar_Versiones_pvt().OrderByDescending(x => x.Fecha).FirstOrDefault()!;
+                txtVersionDisponible.Text = objVersionPvt is null ? "" : objVersionPvt.Nombre;
+                if (objVersionPvt is not null)
+                {
+                    if (objVersionPvt.Id == objEquipo.cep_id_pvt)
+                        btnActualizar.Enabled = false;
+                    else
+                    {
+                        btnActualizar.Enabled = true;
+                    }
+                }
                 else
                 {
-                    btnActualizar.Enabled = true;
+                    btnActualizar.Enabled = false;
                 }
             }
             else
             {
-                btnActualizar.Enabled = false;
+                objVersion = new GeneralData().Listar_Versiones().OrderByDescending(x => x.cvr_sfecha_version).FirstOrDefault()!;
+                txtVersionDisponible.Text = objVersion is null ? "" : objVersion.cvr_vversion;
+                if (objVersion is not null)
+                {
+                    if (objVersion.cvr_icod_version == objEquipo.cvr_icod_version)
+                        btnActualizar.Enabled = false;
+                    else
+                    {
+                        btnActualizar.Enabled = true;
+                    }
+                }
+                else
+                {
+                    btnActualizar.Enabled = false;
+                }
             }
 
             if (!btnActualizar.Enabled)
@@ -465,21 +529,35 @@ namespace SGE.UpdaterApp
                 pathAplicacion = pathPrincipal + @"\SGE.WindowForms.application";
                 string PathFiles = pathPrincipal + @"\Application Files";
                 string PathSetup = pathPrincipal + @"\setup.exe";
-                string PathAutoRun= pathPrincipal + @"\autorun.inf";
+                string PathAutoRun = pathPrincipal + @"\autorun.inf";
                 if (Directory.Exists(PathFiles))
                     Directory.Delete(PathFiles, true);
                 if (File.Exists(pathAplicacion))
                     File.Delete(pathAplicacion);
                 if (File.Exists(PathSetup))
                     File.Delete(PathSetup);
-                if (File.Exists(PathAutoRun))  
+                if (File.Exists(PathAutoRun))
                     File.Delete(PathAutoRun);
-                if (File.Exists(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip"))
-                    File.Delete(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip");
-                //DESCARGAMOS DE DROPBOX
-                pathArchivoRar = pathSistema + @"\" + objVersion.cvr_vversion + ".zip";
-                indicador = actualizando;
-                cliente.DownloadFileAsync(new Uri(objVersion.cvr_vurl), pathArchivoRar);
+                if (pvt)
+                {
+                    if (File.Exists(pathPrincipal + "\\" + objEquipo.NombrePvt + ".zip"))
+                        File.Delete(pathPrincipal + "\\" + objEquipo.NombrePvt + ".zip");
+                    //DESCARGAMOS DE DROPBOX
+                    pathArchivoRar = pathSistema + @"\" + objVersionPvt.Nombre + ".zip";
+                    indicador = actualizando;
+                    cliente.DownloadFileAsync(new Uri(objVersionPvt.Link), pathArchivoRar);
+                }
+                else
+                {
+                    if (File.Exists(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip"))
+                        File.Delete(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip");
+                    //DESCARGAMOS DE DROPBOX
+                    pathArchivoRar = pathSistema + @"\" + objVersion.cvr_vversion + ".zip";
+                    indicador = actualizando;
+                    cliente.DownloadFileAsync(new Uri(objVersion.cvr_vurl), pathArchivoRar);
+                }
+
+
 
             }
             catch (Exception ex)
@@ -493,15 +571,7 @@ namespace SGE.UpdaterApp
 
         private void guna2TabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int tabSiguiente = Convert.ToInt32(guna2TabControl1.SelectedIndex);
-            if (!tabs[tabSiguiente])
-            {
-                guna2TabControl1.SelectedIndex = tabActual;
-            }
-            else
-            {
-                tabActual = tabSiguiente;
-            }
+            
         }
 
         private void lkpSistema_KeyDown(object sender, KeyEventArgs e)
@@ -527,6 +597,11 @@ namespace SGE.UpdaterApp
 
         }
 
-
+        private void btnSelectPvt_Click(object sender, EventArgs e)
+        {
+            int seleccion  = Convert.ToInt32(lkpSelectPvt.SelectedValue);
+            pvt = seleccion == 2;
+            verificar();
+        }
     }
 }

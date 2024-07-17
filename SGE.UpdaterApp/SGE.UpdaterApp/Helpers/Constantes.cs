@@ -42,5 +42,6 @@ namespace SGE.UpdaterApp.Helpers
         public static int tabSeleccionar = 1;
         public static int tabInstalar = 2;
         public static int tabActualizar = 3;
+        public static int tabSelectPvt = 4;
     }
 }

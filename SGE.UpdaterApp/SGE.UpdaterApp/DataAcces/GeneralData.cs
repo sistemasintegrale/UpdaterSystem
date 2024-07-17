@@ -88,6 +88,7 @@ namespace SGE.UpdaterApp.DataAcces
                         cmd.Parameters.AddWithValue("@cvr_icod_version", objEquipo.cvr_icod_version);
                         cmd.Parameters.AddWithValue("@ceq_sfecha_actualizacion", objEquipo.ceq_sfecha_actualizacion);
                         cmd.Parameters.AddWithValue("@cep_vubicacion_actualizador", objEquipo.cep_vubicacion_actualizador);
+                        cmd.Parameters.AddWithValue("@cep_id_pvt", objEquipo.cep_id_pvt);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -130,6 +131,8 @@ namespace SGE.UpdaterApp.DataAcces
                             obj.cep_vid_cpu = reader["cep_vid_cpu"].ToString()!;
                             obj.cep_bflag_acceso = Convert.ToBoolean(reader["cep_bflag_acceso"]);
                             obj.cep_vubicacion_actualizador = reader["cep_vubicacion_actualizador"].ToString()!;
+                            obj.cep_id_pvt = Convert.ToInt32(reader["cep_id_pvt"]);
+                            obj.NombrePvt = reader["NombrePvt"].ToString();
                         }
                     }
                 }
@@ -170,6 +173,44 @@ namespace SGE.UpdaterApp.DataAcces
                     }
                 }
             }   
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            return lista;
+        }
+
+        public List<ControlVersionesPvt> Listar_Versiones_pvt()
+        {
+            List<ControlVersionesPvt> lista = new List<ControlVersionesPvt>();
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(HelperConnection.conexion()))
+                {
+                    cn.Open();
+                    using (SqlCommand cmd = new SqlCommand("ACT_CONTROL_PUNTO_VENTA_LISTAR", cn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandTimeout = int.MaxValue;
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        while (reader.Read())
+                        {
+
+                            lista.Add(new ControlVersionesPvt()
+                            {
+                                Id = Convert.ToInt32(reader["Id"]),
+                                Nombre = reader["Nombre"].ToString()!,
+                                Fecha = Convert.ToDateTime(reader["Fecha"]),
+                                Link = reader["Link"].ToString()!,
+
+
+                            }); ;
+
+                        }
+                    }
+                }
+
+            }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
