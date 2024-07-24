@@ -542,6 +542,9 @@ namespace SGE.UpdaterApp
                 {
                     if (File.Exists(pathPrincipal + "\\" + objEquipo.NombrePvt + ".zip"))
                         File.Delete(pathPrincipal + "\\" + objEquipo.NombrePvt + ".zip");
+                    //ELIMINAR EL ARCHIVO CON EL MISMO NOMBRE
+                    if (File.Exists(pathPrincipal + "\\" + objVersionPvt.Nombre + ".zip"))
+                        File.Delete(pathPrincipal + "\\" + objVersionPvt.Nombre + ".zip");
                     //DESCARGAMOS DE DROPBOX
                     pathArchivoRar = pathSistema + @"\" + objVersionPvt.Nombre + ".zip";
                     indicador = actualizando;
@@ -551,6 +554,9 @@ namespace SGE.UpdaterApp
                 {
                     if (File.Exists(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip"))
                         File.Delete(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip");
+                    //ELIMINAR EL ARCHIVO CON EL MISMO NOMBRE
+                    if (File.Exists(pathPrincipal + "\\" + objVersion.cvr_vversion + ".zip"))
+                        File.Delete(pathPrincipal + "\\" + objVersion.cvr_vversion + ".zip");
                     //DESCARGAMOS DE DROPBOX
                     pathArchivoRar = pathSistema + @"\" + objVersion.cvr_vversion + ".zip";
                     indicador = actualizando;
