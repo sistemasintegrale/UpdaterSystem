@@ -42,7 +42,7 @@ namespace SGE.UpdaterApp.Helpers
                     strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=telaslima_com_TL;Persist Security Info=True;User ID=telaslima_com_de;Password=X3V!~OB@za;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
                     break;
                 case 10: //ULIKE
-                    strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=telaslima_com_UL;Persist Security Info=True;User ID=sistemasintegrales_com_de;Password=rogola2012;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
+                    strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=telaslima_com_UL;Persist Security Info=True;User ID=telaslima_com_de;Password=X3V!~OB@za;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
                     break;
                 case 11: //MULTI EMPRESA
                     strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=real_invest_mmm_com_me;Persist Security Info=True;User ID=telaslima_com_de;Password=X3V!~OB@za;MultipleActiveResultSets = True;TrustServerCertificate = False;Encrypt = False";
