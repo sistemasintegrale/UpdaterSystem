@@ -377,8 +377,10 @@ namespace SGE.UpdaterApp
                 { var obj10 = new Empresas(); obj10.Id = Constantes.ConnUlike; obj10.Name = "ULIKE"; list.Add(obj10); }
                 if (x == Constantes.ConnMultiEmpresa)
                 { var obj11 = new Empresas(); obj11.Id = Constantes.ConnMultiEmpresa; obj11.Name = "MULTI EMPRESA"; list.Add(obj11); }
-                if (x == Constantes.ConnJabsa)
+                    if (x == Constantes.ConnJabsa)
                 { var obj12 = new Empresas(); obj12.Id = Constantes.ConnJabsa; obj12.Name = "JABSA"; list.Add(obj12); }
+                if (x == Constantes.ConnJudithLab)
+                { var obj13 = new Empresas(); obj13.Id = Constantes.ConnJudithLab; obj13.Name = "JUDITH LAB"; list.Add(obj13); }
             });
 
             BSControls.Guna2Combo(lkpSistema, list, "Name", "Id", true);

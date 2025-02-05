@@ -22,8 +22,10 @@ namespace SGE.UpdaterApp.Helpers
         public static int ConnUlike = 10;
         public static int ConnMultiEmpresa = 11;
         public static int ConnJabsa = 12;
+        public static int ConnJudithLab = 13;
 
-        public static int TotalConecciones = 12;
+
+        public static int TotalConecciones = 13;
         //
 
         public static int msgAlert = 1;
