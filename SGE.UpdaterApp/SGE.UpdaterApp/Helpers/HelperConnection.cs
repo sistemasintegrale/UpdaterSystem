@@ -54,7 +54,7 @@ namespace SGE.UpdaterApp.Helpers
                     strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=telaslima_com_judith_lab;Persist Security Info=True;User ID=telaslima_com_judith_lab;Password=X3V!~OB@za;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
                     break;
                 case 14: //MJC GROUP
-                    strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=mjcgroupsac_com_mjc;Persist Security Info=True;User ID=telaslima_com_judith_lab;Password=4PeI=%,a;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
+                    strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=mjcgroupsac_com_mjc;Persist Security Info=True;User ID=mjcgroupsac_com_mjc;Password=4PeI=%,a;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
                     break;
             }
             return strConexion;
