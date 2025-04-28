@@ -53,6 +53,9 @@ namespace SGE.UpdaterApp.Helpers
                 case 13: //JUTIDH LAB
                     strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=telaslima_com_judith_lab;Persist Security Info=True;User ID=telaslima_com_judith_lab;Password=X3V!~OB@za;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
                     break;
+                case 14: //MJC GROUP
+                    strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=mjcgroupsac_com_mjc;Persist Security Info=True;User ID=telaslima_com_judith_lab;Password=4PeI=%,a;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
+                    break;
             }
             return strConexion;
         }
@@ -101,6 +104,10 @@ namespace SGE.UpdaterApp.Helpers
                 case 13:// JUDITH LAB
                     strConexion = "Judith-Lab";
                     break;
+                case 14: //MJC-GROUP    
+                    strConexion = "Mjc-group";
+                    break;
+                   
             }
             return strConexion;
         }

@@ -381,6 +381,8 @@ namespace SGE.UpdaterApp
                 { var obj12 = new Empresas(); obj12.Id = Constantes.ConnJabsa; obj12.Name = "JABSA"; list.Add(obj12); }
                 if (x == Constantes.ConnJudithLab)
                 { var obj13 = new Empresas(); obj13.Id = Constantes.ConnJudithLab; obj13.Name = "JUDITH LAB"; list.Add(obj13); }
+                if (x == Constantes.ConnMjcGroup)
+                { var obj14 = new Empresas(); obj14.Id = Constantes.ConnMjcGroup; obj14.Name = "MJC GROUP"; list.Add(obj14); }
             });
 
             BSControls.Guna2Combo(lkpSistema, list, "Name", "Id", true);
