@@ -56,6 +56,9 @@ namespace SGE.UpdaterApp.Helpers
                 case 14: //MJC GROUP
                     strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=mjcgroupsac_com_mjc;Persist Security Info=True;User ID=mjcgroupsac_com_mjc;Password=4PeI=%,a;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
                     break;
+                case 15: //iglesia sjl
+                    strConexion = "Data Source=tcp:95.217.194.247,1433;Initial Catalog=alianzasjl_org_alianzasjl;Persist Security Info=True;User ID=alianzasjl_org_alianzasjl;Password=(6FY~wgi;MultipleActiveResultSets = True; TrustServerCertificate = False; Encrypt = False";
+                    break;
             }
             return strConexion;
         }
@@ -107,7 +110,11 @@ namespace SGE.UpdaterApp.Helpers
                 case 14: //MJC-GROUP    
                     strConexion = "Mjc-group";
                     break;
-                   
+                case 15: //MJC-GROUP    
+                    strConexion = "Iglesia-Sjl";
+                    break;
+
+
             }
             return strConexion;
         }
