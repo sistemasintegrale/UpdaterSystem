@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="SGE.UpdaterApp.exe" version="1.0.0.17" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="SGE.UpdaterApp.exe" version="1.0.0.18" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -464,7 +464,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tQyn/sN1IoJd9oVCR7S9o4n+h89bsF9wfM7FEWMiDRY=</dsig:DigestValue>
+      <dsig:DigestValue>e4XelXxLihJ+oEKNZDFz6yTn4VoC9a1oAV0/kPB32kU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SGE.UpdaterApp.dll.config" size="40280">
@@ -482,7 +482,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>vF7elJvvw+sv7Ch1cAXy4mt05h0CO+coYCng6YyWzd4=</dsig:DigestValue>
+      <dsig:DigestValue>ThL0dxRGQyOMjERo/hWLulyqaEWS7BU2b/LYbQkTc2U=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SGE.UpdaterApp.runtimeconfig.json" size="372">
