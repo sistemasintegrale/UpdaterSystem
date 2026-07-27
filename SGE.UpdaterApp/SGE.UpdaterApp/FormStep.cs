@@ -522,20 +522,20 @@ namespace SGE.UpdaterApp
         {
             Actualizar();
         }
+   
+
         private void Actualizar()
         {
+        
             string pathPrincipal = pathSistema;
             try
             {
+        
+                //PRIMERO ELIMINAMOS LA VERSION ANTERIOR
                 pathAplicacion = pathPrincipal + @"\SGE.WindowForms.application";
                 string PathFiles = pathPrincipal + @"\Application Files";
                 string PathSetup = pathPrincipal + @"\setup.exe";
                 string PathAutoRun = pathPrincipal + @"\autorun.inf";
-
-                //PRIMERO DESINSTALAMOS CORRECTAMENTE VIA CLICKONCE (evita que el registro quede corrupto)
-                DesinstalarClickOnce();
-
-                //LUEGO ELIMINAMOS LOS ARCHIVOS FISICOS DE LA VERSION ANTERIOR
                 if (Directory.Exists(PathFiles))
                     Directory.Delete(PathFiles, true);
                 if (File.Exists(pathAplicacion))
@@ -544,13 +544,14 @@ namespace SGE.UpdaterApp
                     File.Delete(PathSetup);
                 if (File.Exists(PathAutoRun))
                     File.Delete(PathAutoRun);
-
                 if (pvt)
                 {
                     if (File.Exists(pathPrincipal + "\\" + objEquipo.NombrePvt + ".zip"))
                         File.Delete(pathPrincipal + "\\" + objEquipo.NombrePvt + ".zip");
+                    //ELIMINAR EL ARCHIVO CON EL MISMO NOMBRE
                     if (File.Exists(pathPrincipal + "\\" + objVersionPvt.Nombre + ".zip"))
                         File.Delete(pathPrincipal + "\\" + objVersionPvt.Nombre + ".zip");
+                    //DESCARGAMOS DE DROPBOX
                     pathArchivoRar = pathSistema + @"\" + objVersionPvt.Nombre + ".zip";
                     indicador = actualizando;
                     cliente.DownloadFileAsync(new Uri(objVersionPvt.Link), pathArchivoRar);
@@ -559,114 +560,26 @@ namespace SGE.UpdaterApp
                 {
                     if (File.Exists(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip"))
                         File.Delete(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip");
+                    //ELIMINAR EL ARCHIVO CON EL MISMO NOMBRE
                     if (File.Exists(pathPrincipal + "\\" + objVersion.cvr_vversion + ".zip"))
                         File.Delete(pathPrincipal + "\\" + objVersion.cvr_vversion + ".zip");
+                    //DESCARGAMOS DE DROPBOX
                     pathArchivoRar = pathSistema + @"\" + objVersion.cvr_vversion + ".zip";
                     indicador = actualizando;
                     cliente.DownloadFileAsync(new Uri(objVersion.cvr_vurl), pathArchivoRar);
                 }
+        
+        
+        
             }
             catch (Exception ex)
             {
+        
                 Console.WriteLine(ex.ToString());
             }
+        
+        
         }
-
-        /// <summary>
-        /// Invoca la desinstalación oficial de ClickOnce para SGE.WindowForms.application
-        /// antes de borrar archivos manualmente. Esto evita que el almacén de componentes
-        /// (registro de ClickOnce) quede desincronizado con los archivos en disco.
-        /// </summary>
-        private void DesinstalarClickOnce()
-        {
-            try
-            {
-                string identidad = "SGE.WindowForms.application#SGE.WindowForms.application, " +
-                                    "Culture=neutral, PublicKeyToken=ffe5340b8dfedb05, processorArchitecture=x86";
-
-                ProcessStartInfo psi = new ProcessStartInfo
-                {
-                    FileName = "rundll32.exe",
-                    Arguments = $"dfshim.dll,ShArpMaintain \"{identidad}\"",
-                    UseShellExecute = false,
-                    CreateNoWindow = true,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true
-                };
-
-                using (Process proceso = Process.Start(psi))
-                {
-                    string salida = proceso.StandardOutput.ReadToEnd();
-                    string errores = proceso.StandardError.ReadToEnd();
-                    proceso.WaitForExit(10000);
-
-                    File.AppendAllText(@"C:\SGIUSER\updater_log.txt",
-                        $"[{DateTime.Now}] DesinstalarClickOnce ejecutado. Salida: {salida} Errores: {errores}\n");
-                }
-            }
-            catch (Exception ex)
-            {
-                File.AppendAllText(@"C:\SGIUSER\updater_log.txt",
-                    $"[{DateTime.Now}] Fallo DesinstalarClickOnce: {ex}\n");
-            }
-        }
-
-        ////private void Actualizar()
-        ////{
-
-        ////    string pathPrincipal = pathSistema;
-        ////    try
-        ////    {
-
-        ////        //PRIMERO ELIMINAMOS LA VERSION ANTERIOR
-        ////        pathAplicacion = pathPrincipal + @"\SGE.WindowForms.application";
-        ////        string PathFiles = pathPrincipal + @"\Application Files";
-        ////        string PathSetup = pathPrincipal + @"\setup.exe";
-        ////        string PathAutoRun = pathPrincipal + @"\autorun.inf";
-        ////        if (Directory.Exists(PathFiles))
-        ////            Directory.Delete(PathFiles, true);
-        ////        if (File.Exists(pathAplicacion))
-        ////            File.Delete(pathAplicacion);
-        ////        if (File.Exists(PathSetup))
-        ////            File.Delete(PathSetup);
-        ////        if (File.Exists(PathAutoRun))
-        ////            File.Delete(PathAutoRun);
-        ////        if (pvt)
-        ////        {
-        ////            if (File.Exists(pathPrincipal + "\\" + objEquipo.NombrePvt + ".zip"))
-        ////                File.Delete(pathPrincipal + "\\" + objEquipo.NombrePvt + ".zip");
-        ////            //ELIMINAR EL ARCHIVO CON EL MISMO NOMBRE
-        ////            if (File.Exists(pathPrincipal + "\\" + objVersionPvt.Nombre + ".zip"))
-        ////                File.Delete(pathPrincipal + "\\" + objVersionPvt.Nombre + ".zip");
-        ////            //DESCARGAMOS DE DROPBOX
-        ////            pathArchivoRar = pathSistema + @"\" + objVersionPvt.Nombre + ".zip";
-        ////            indicador = actualizando;
-        ////            cliente.DownloadFileAsync(new Uri(objVersionPvt.Link), pathArchivoRar);
-        ////        }
-        ////        else
-        ////        {
-        ////            if (File.Exists(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip"))
-        ////                File.Delete(pathPrincipal + "\\" + objEquipo.cvr_vversion + ".zip");
-        ////            //ELIMINAR EL ARCHIVO CON EL MISMO NOMBRE
-        ////            if (File.Exists(pathPrincipal + "\\" + objVersion.cvr_vversion + ".zip"))
-        ////                File.Delete(pathPrincipal + "\\" + objVersion.cvr_vversion + ".zip");
-        ////            //DESCARGAMOS DE DROPBOX
-        ////            pathArchivoRar = pathSistema + @"\" + objVersion.cvr_vversion + ".zip";
-        ////            indicador = actualizando;
-        ////            cliente.DownloadFileAsync(new Uri(objVersion.cvr_vurl), pathArchivoRar);
-        ////        }
-
-
-
-        ////    }
-        ////    catch (Exception ex)
-        ////    {
-
-        ////        Console.WriteLine(ex.ToString());
-        ////    }
-
-
-        ////}
 
         private void guna2TabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
