@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="SGE.UpdaterApp.exe" version="1.0.0.50" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="SGE.UpdaterApp.exe" version="1.0.0.20" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -458,13 +458,13 @@
       <dsig:DigestValue>/mA08zSw1vHYq+97YlhugAVbWiLLeEwdnQ5EmY5BpLM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SGE.UpdaterApp.dll" size="453120">
+  <file name="SGE.UpdaterApp.dll" size="454144">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5KAFKUlgcDazFTyrynbxG/W6jWOJUkSHQFPWOf7ooDI=</dsig:DigestValue>
+      <dsig:DigestValue>lGwXa228mfE7qdVsJQPWEeEBTgg/Z4yXPv+91l7Xj58=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SGE.UpdaterApp.dll.config" size="40280">
@@ -482,7 +482,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>RfydEkwEnF2/suxi5+D6AvaZJ9LYj3ptQyBt2TpE92I=</dsig:DigestValue>
+      <dsig:DigestValue>i1xJnzPI8Xoe1wHIwjeqA1jXwEKkyX26s2tR65N7iBI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SGE.UpdaterApp.runtimeconfig.json" size="372">

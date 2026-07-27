@@ -253,23 +253,42 @@ namespace SGE.UpdaterApp
                     Application.Exit();
                 }
             }
+
             else
             {
-
                 pathSistema = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
                 if (pvt) pathSistema = pathSistema + "-pvt";
+
                 if (!Directory.Exists(pathSistema))
                 {
-                    Directory.CreateDirectory(pathSistema);
+                    // ⬇ ES PRIMERA INSTALACIÓN: limpiamos el caché antes de continuar
+                    LimpiarCacheClickOnce();
 
+                    Directory.CreateDirectory(pathSistema);
                     IrTabInstalacion();
                 }
                 else
                 {
-
                     IrTabActualizacion();
                 }
             }
+            //else
+            //{
+
+            //    pathSistema = @"C:\\Publish-" + HelperConnection.GeneratePath(Constantes.Connection);
+            //    if (pvt) pathSistema = pathSistema + "-pvt";
+            //    if (!Directory.Exists(pathSistema))
+            //    {
+            //        Directory.CreateDirectory(pathSistema);
+
+            //        IrTabInstalacion();
+            //    }
+            //    else
+            //    {
+
+            //        IrTabActualizacion();
+            //    }
+            //}
 
             //VERIFICAMOS SI YA ESTA INSTALADO EL SISTEMA
 
@@ -580,7 +599,53 @@ namespace SGE.UpdaterApp
         
         
         }
+        /// <summary>
+        /// Limpia el caché de ClickOnce antes de una primera instalación,
+        /// para evitar que restos de instalaciones previas (de otras máquinas clonadas,
+        /// imágenes de disco, o instalaciones fallidas anteriores) generen conflictos
+        /// como "No se puede convertir la aplicación en aplicación en línea".
+        /// </summary>
+        private void LimpiarCacheClickOnce()
+        {
+            string rutaCache = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                "Apps", "2.0");
 
+            try
+            {
+                if (Directory.Exists(rutaCache))
+                {
+                    Directory.Delete(rutaCache, true);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Aviso: Directory.Delete falló, intentando con PowerShell: " + ex.Message);
+
+                try
+                {
+                    ProcessStartInfo psi = new ProcessStartInfo
+                    {
+                        FileName = "powershell.exe",
+                        Arguments = "-NoProfile -ExecutionPolicy Bypass -Command " +
+                            "\"Remove-Item '" + rutaCache + "' -Recurse -Force -ErrorAction SilentlyContinue\"",
+                        UseShellExecute = false,
+                        CreateNoWindow = true,
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true
+                    };
+
+                    using (Process proceso = Process.Start(psi))
+                    {
+                        proceso.WaitForExit(10000);
+                    }
+                }
+                catch (Exception ex2)
+                {
+                    Console.WriteLine("Aviso: tampoco se pudo limpiar vía PowerShell: " + ex2.Message);
+                }
+            }
+        }
         private void guna2TabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
